@@ -1,10 +1,10 @@
 Server listening on http://localhost:3000
-Cleared transactions table
 Received webhook payload: {
-  "id": "revert_valid",
+  "id": "transaction_1765496373046",
   "card_id": "card_123",
   "amount": 100,
   "currency": "usd",
+  "balanceExceeded": true,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -17,27 +17,62 @@ Received webhook payload: {
   }
 }
 Received webhook payload: {
-  "id": "revert_invalid",
+  "id": "transaction_1765496373812",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": true,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496373978",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": true,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496374141",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": true,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496375011",
   "card_id": "card_123",
   "amount": 5000,
   "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Cleared transactions table
-Received webhook payload: {
-  "id": "revert_valid",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
+  "balanceExceeded": true,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -50,10 +85,11 @@ Received webhook payload: {
   }
 }
 Received webhook payload: {
-  "id": "revert_invalid",
+  "id": "transaction_1765496375204",
   "card_id": "card_123",
   "amount": 5000,
   "currency": "usd",
+  "balanceExceeded": true,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -66,75 +102,11 @@ Received webhook payload: {
   }
 }
 Received webhook payload: {
-  "id": "transaction_1765495078320",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495078950",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495079959",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495080679",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Cleared transactions table
-Received webhook payload: {
-  "id": "transaction_1765495082787",
+  "id": "transaction_1765496375465",
   "card_id": "card_123",
   "amount": 5000,
   "currency": "usd",
+  "balanceExceeded": true,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -147,74 +119,11 @@ Received webhook payload: {
   }
 }
 Received webhook payload: {
-  "id": "transaction_1765495084167",
+  "id": "transaction_1765496375859",
   "card_id": "card_123",
   "amount": 5000,
   "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495084550",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495085826",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495086307",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495086591",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
+  "balanceExceeded": true,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -228,10 +137,11 @@ Received webhook payload: {
 }
 Cleared transactions table
 Received webhook payload: {
-  "id": "transaction_1765495100729",
+  "id": "transaction_1765496429500",
   "card_id": "card_123",
   "amount": 100,
   "currency": "usd",
+  "balanceExceeded": false,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -244,10 +154,11 @@ Received webhook payload: {
   }
 }
 Received webhook payload: {
-  "id": "transaction_1765495101282",
+  "id": "transaction_1765496431097",
   "card_id": "card_123",
   "amount": 100,
   "currency": "usd",
+  "balanceExceeded": false,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -260,10 +171,11 @@ Received webhook payload: {
   }
 }
 Received webhook payload: {
-  "id": "transaction_1765495101516",
+  "id": "transaction_1765496431248",
   "card_id": "card_123",
   "amount": 100,
   "currency": "usd",
+  "balanceExceeded": false,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -276,10 +188,11 @@ Received webhook payload: {
   }
 }
 Received webhook payload: {
-  "id": "transaction_1765495101684",
+  "id": "transaction_1765496431405",
   "card_id": "card_123",
   "amount": 100,
   "currency": "usd",
+  "balanceExceeded": false,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -292,74 +205,45 @@ Received webhook payload: {
   }
 }
 Received webhook payload: {
-  "id": "transaction_1765495102553",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495103007",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495103510",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495104097",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "post_comment_test",
+  "id": "transaction_1765496433183",
   "card_id": "card_123",
   "amount": 100,
   "currency": "usd",
+  "balanceExceeded": true,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496433871",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": true,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496434136",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": true,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -373,10 +257,11 @@ Received webhook payload: {
 }
 Cleared transactions table
 Received webhook payload: {
-  "id": "transaction_1765495231425",
+  "id": "transaction_1765496455794",
   "card_id": "card_123",
   "amount": 100,
   "currency": "usd",
+  "balanceExceeded": false,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -389,10 +274,130 @@ Received webhook payload: {
   }
 }
 Received webhook payload: {
-  "id": "transaction_1765495232660",
+  "id": "transaction_1765496455968",
   "card_id": "card_123",
   "amount": 100,
   "currency": "usd",
+  "balanceExceeded": false,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496456126",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": false,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496456298",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": false,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496456419",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": false,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496458435",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": true,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496458593",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": true,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496458741",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": true,
+  "merchant_data": {
+    "category": 7623,
+    "address": {
+      "line1": "123 main st",
+      "line2": "Unit 1",
+      "city": "New York",
+      "state": "NY",
+      "country": "US"
+    }
+  }
+}
+Received webhook payload: {
+  "id": "transaction_1765496458891",
+  "card_id": "card_123",
+  "amount": 100,
+  "currency": "usd",
+  "balanceExceeded": true,
   "merchant_data": {
     "category": 7623,
     "address": {
@@ -405,246 +410,3 @@ Received webhook payload: {
   }
 }
 Cleared transactions table
-Received webhook payload: {
-  "id": "transaction_1765495235075",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Cleared transactions table
-Received webhook payload: {
-  "id": "transaction_1765495236360",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495236761",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495236935",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495237069",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Cleared transactions table
-Received webhook payload: {
-  "id": "transaction_1765495238799",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495238943",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495239184",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495949290",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Cleared transactions table
-Received webhook payload: {
-  "id": "transaction_1765495953219",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495954681",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495954868",
-  "card_id": "card_123",
-  "amount": 100,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495955920",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495956306",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}
-Received webhook payload: {
-  "id": "transaction_1765495956535",
-  "card_id": "card_123",
-  "amount": 5000,
-  "currency": "usd",
-  "merchant_data": {
-    "category": 7623,
-    "address": {
-      "line1": "123 main st",
-      "line2": "Unit 1",
-      "city": "New York",
-      "state": "NY",
-      "country": "US"
-    }
-  }
-}

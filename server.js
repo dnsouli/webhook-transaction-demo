@@ -39,7 +39,8 @@ app.post('/webhooks/transactions', (req, res) => {
   const payload = req.body;
   console.log('Received webhook payload:', JSON.stringify(payload, null, 2));
   // Approve transaction when amount < 5000
-  const approved = payload.amount < 5000;
+  // If balanceExceeded flag is set, always disapprove
+  const approved = payload.balanceExceeded ? false : (payload.amount < 5000);
   db.run(
     `INSERT OR REPLACE INTO transactions (id, card_id, amount, currency, approved) VALUES (?, ?, ?, ?, ?)`,
     [payload.id, payload.card_id, payload.amount, payload.currency, approved ? 1 : 0],

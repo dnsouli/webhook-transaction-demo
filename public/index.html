@@ -10,10 +10,20 @@
     <div class="max-w-4xl mx-auto bg-white shadow rounded p-6">
       <h1 class="text-2xl font-bold mb-4">Webhook Transaction Demo</h1>
 
+      <div class="mb-4 text-sm text-gray-600 space-y-1">
+        <p><strong>Valid Transaction:</strong> Sends $1.00 — approved if under $50.00</p>
+        <p><strong>Invalid Transaction:</strong> Sends $50.00 — always denied</p>
+        <p><strong>Balance Exceeded Toggle:</strong> When checked, all transactions are disapproved</p>
+      </div>
+
       <div class="mb-4 flex items-center space-x-2">
         <button id="validBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Make Valid Transaction</button>
         <button id="invalidBtn" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Make Invalid Transaction</button>
         <button id="clearBtn" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300">Clear Today's Transactions</button>
+        <label class="flex items-center space-x-2 ml-4">
+          <input type="checkbox" id="balanceExceededToggle" class="w-4 h-4" />
+          <span class="text-sm font-medium">Balance Exceeded</span>
+        </label>
       </div>
 
       <div>
@@ -84,14 +94,14 @@
         await fetchTransactions();
       }
 
-      
-
       validBtn.addEventListener('click', async () => {
+        const balanceExceeded = document.getElementById('balanceExceededToggle').checked;
         const payload = {
           id: 'transaction_' + Date.now(),
           card_id: 'card_123',
           amount: 100,
           currency: 'usd',
+          balanceExceeded: balanceExceeded,
           merchant_data: {
             category: 7623,
             address: {
@@ -107,11 +117,13 @@
       });
 
       invalidBtn.addEventListener('click', async () => {
+        const balanceExceeded = document.getElementById('balanceExceededToggle').checked;
         const payload = {
           id: 'transaction_' + Date.now(),
           card_id: 'card_123',
-          amount: 5000, // will be disapproved since rule is amount < 5000
+          amount: 5000,
           currency: 'usd',
+          balanceExceeded: balanceExceeded,
           merchant_data: {
             category: 7623,
             address: {
