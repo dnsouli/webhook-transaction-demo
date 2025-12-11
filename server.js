@@ -33,14 +33,12 @@ function initDb() {
 }
 
 const db = initDb();
-// No special queueing is required for the simple approval rule.
-// Keep server logic simple: approve when amount < 5000.
 
 // POST webhook
 app.post('/webhooks/transactions', (req, res) => {
   const payload = req.body;
   console.log('Received webhook payload:', JSON.stringify(payload, null, 2));
-  // Very simple approval rule: approve when amount < 5000
+  // Approve transaction when amount < 5000
   const approved = payload.amount < 5000;
   db.run(
     `INSERT OR REPLACE INTO transactions (id, card_id, amount, currency, approved) VALUES (?, ?, ?, ?, ?)`,
