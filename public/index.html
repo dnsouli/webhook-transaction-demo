@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Webhook Transaction Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen p-6">
+    <div class="max-w-4xl mx-auto bg-white shadow rounded p-6">
+      <h1 class="text-2xl font-bold mb-4">Webhook Transaction Demo</h1>
+
+      <div class="mb-4 flex items-center space-x-2">
+        <button id="validBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Make Valid Transaction</button>
+        <button id="invalidBtn" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Make Invalid Transaction</button>
+        <button id="clearBtn" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300">Clear Today's Transactions</button>
+      </div>
+
+      <div>
+        <table class="min-w-full border" id="txTable">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="px-4 py-2 text-left">id</th>
+              <th class="px-4 py-2 text-left">card_id</th>
+              <th class="px-4 py-2 text-left">amount</th>
+              <th class="px-4 py-2 text-left">currency</th>
+              <th class="px-4 py-2 text-left">approved</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr><td colspan="5" class="p-4 text-gray-500">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      const validBtn = document.getElementById('validBtn');
+      const invalidBtn = document.getElementById('invalidBtn');
+      const clearBtn = document.getElementById('clearBtn');
+      const tbody = document.getElementById('tbody');
+
+      
+
+      async function fetchTransactions() {
+        const res = await fetch('/transactions');
+        const rows = await res.json();
+        tbody.innerHTML = '';
+        
+
+        if (!rows.length) {
+          tbody.innerHTML = '<tr><td colspan="5" class="p-4 text-gray-500">No transactions yet.</td></tr>';
+          return;
+        }
+        for (const r of rows) {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td class="border px-4 py-2">${r.id}</td>
+            <td class="border px-4 py-2">${r.card_id}</td>
+            <td class="border px-4 py-2">${r.amount}</td>
+            <td class="border px-4 py-2">${r.currency}</td>
+            <td class="border px-4 py-2">${r.approved}</td>
+          `;
+          tbody.appendChild(tr);
+        }
+      }
+
+      // Disable multiple rapid clicks to avoid duplicate submissions
+      async function sendPayload(payload, button) {
+        if (button) button.disabled = true;
+        try {
+          const res = await fetch('/webhooks/transactions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await res.json();
+          console.log('Webhook response', data);
+        } catch (err) {
+          console.error('Request failed', err);
+        } finally {
+          if (button) button.disabled = false;
+        }
+        await fetchTransactions();
+      }
+
+      
+
+      validBtn.addEventListener('click', async () => {
+        const payload = {
+          id: 'transaction_' + Date.now(),
+          card_id: 'card_123',
+          amount: 100,
+          currency: 'usd',
+          merchant_data: {
+            category: 7623,
+            address: {
+              line1: '123 main st',
+              line2: 'Unit 1',
+              city: 'New York',
+              state: 'NY',
+              country: 'US'
+            }
+          }
+        };
+        await sendPayload(payload, validBtn);
+      });
+
+      invalidBtn.addEventListener('click', async () => {
+        const payload = {
+          id: 'transaction_' + Date.now(),
+          card_id: 'card_123',
+          amount: 5000, // will be disapproved since rule is amount < 5000
+          currency: 'usd',
+          merchant_data: {
+            category: 7623,
+            address: {
+              line1: '123 main st',
+              line2: 'Unit 1',
+              city: 'New York',
+              state: 'NY',
+              country: 'US'
+            }
+          }
+        };
+        await sendPayload(payload, invalidBtn);
+      });
+
+      clearBtn.addEventListener('click', async () => {
+        if (clearBtn) clearBtn.disabled = true;
+        try {
+          const res = await fetch('/transactions/clear', { method: 'POST' });
+          const data = await res.json();
+          console.log('Clear response', data);
+        } catch (err) {
+          console.error('Clear failed', err);
+        } finally {
+          if (clearBtn) clearBtn.disabled = false;
+        }
+        await fetchTransactions();
+      });
+
+      // Initial load
+      document.addEventListener('DOMContentLoaded', fetchTransactions);
+    </script>
+  </body>
+</html>
